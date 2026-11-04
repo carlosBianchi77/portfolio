@@ -1,0 +1,81 @@
+.tech-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-category {
+  margin-bottom: 3rem;
+}
+
+.tech-category h3 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* --- Carrusel (Marquee) --- */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+  align-items: center;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- Elementos con resplandor exterior permanente --- */
+.tech-pill,
+.tech-pill-static {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: default;
+  transition: transform 0.2s ease;
+}
+
+.tech-pill:hover,
+.tech-pill-static:hover {
+  transform: translateY(-2px);
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Estática para tecnologías en aprendizaje --- */
+.tech-tags-static {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}

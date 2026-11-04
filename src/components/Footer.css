@@ -1,0 +1,81 @@
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0;
+  background-color: var(--bg-primary);
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  line-height: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.social-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* --- COLORES OFICIALES Y VISIBLES SIEMPRE --- */
+
+/* GitHub */
+.social-icon.github {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.social-icon.github:hover {
+  transform: translateY(-3px);
+  border-color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+}
+
+/* LinkedIn */
+.social-icon.linkedin {
+  color: #0a66c2;
+  border: 1px solid rgba(10, 102, 194, 0.35);
+}
+.social-icon.linkedin:hover {
+  transform: translateY(-3px);
+  border-color: #0a66c2;
+  box-shadow: 0 0 12px rgba(10, 102, 194, 0.35);
+}
+
+/* WhatsApp */
+.social-icon.whatsapp {
+  color: #25d366;
+  border: 1px solid rgba(37, 211, 102, 0.35);
+}
+.social-icon.whatsapp:hover {
+  transform: translateY(-3px);
+  border-color: #25d366;
+  box-shadow: 0 0 12px rgba(37, 211, 102, 0.35);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

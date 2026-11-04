@@ -1,0 +1,45 @@
+.bg-stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0c10;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Canvas de las estrellas */
+.stars-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Rejilla de cuadrados en el fondo */
+.bg-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 2;
+  /* Máscara radial para oscurecer los bordes */
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 90%);
+}
+
+/* Resplandor naranja atenuado en la parte superior */
+.bg-glow-top {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(1, 16, 60, 0.735) /* rgba(255, 107, 0, 0.12) */ 0%, rgba(10, 12, 16, 0) 70%);
+  z-index: 2;
+  filter: blur(40px);
+}
