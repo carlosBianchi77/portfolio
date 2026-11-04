@@ -1,17 +1,18 @@
 .tech-section {
-  padding: 5rem 2rem;
+  padding: 4rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .tech-category {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .tech-category h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   font-weight: 500;
 }
 
@@ -45,7 +46,7 @@
   }
 }
 
-/* --- Elementos con resplandor exterior permanente --- */
+/* --- Elementos --- */
 .tech-pill,
 .tech-pill-static {
   display: flex;
@@ -78,4 +79,25 @@
   flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
+}
+
+/* --- RESPONSIVO PARA CELULARES --- */
+@media (max-width: 768px) {
+  .tech-section {
+    padding: 3rem 1rem;
+  }
+  
+  .marquee-track {
+    gap: 2rem;
+    animation: scrollMarquee 20s linear infinite;
+  }
+
+  .tech-tags-static {
+    gap: 1.5rem;
+  }
+
+  .tech-pill,
+  .tech-pill-static {
+    font-size: 0.9rem;
+  }
 }
