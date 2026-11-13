@@ -3,7 +3,7 @@ export const projectsData = [
     id: 1,
     title: "TechStore",
     description:
-      "Tienda online desarrollada con React. Implementa componentes reutilizables, catálogo de productos, carrito de compras dinámico y gestión de estado global utilizando Zustand.",
+      "Tienda online desarrollada con React. Integra consumo de APIs para obtener productos, componentes reutilizables, catálogo dinámico, carrito de compras y gestión de estado global utilizando Zustand.",
     status: "Finalizado",
     tags: [
       "React",
