@@ -1,7 +1,7 @@
 import React from 'react';
 import './Technologies.css';
 
-export const Technologies = () => {
+export const Technologies = ({ t = {} }) => {
   // Tecnologías que utilizo con sus logotipos SVG oficiales
   const activeTechs = [
     { 
@@ -111,11 +111,13 @@ export const Technologies = () => {
   return (
     <section id="tecnologias" className="tech-section">
       <div className="section-container">
-        <h2 className="section-title">Tecnologías y <span>herramientas</span></h2>
+        <h2 className="section-title">
+          {t.titleMain || "Tecnologías y"} <span>{t.titleSpan || "herramientas"}</span>
+        </h2>
 
         {/* Carrusel en movimiento horizontal */}
         <div className="tech-category">
-          <h3>Tecnologías que utilizo</h3>
+          <h3>{t.activeTitle || "Tecnologías que utilizo"}</h3>
           
           <div className="marquee-container">
             <div className="marquee-track">
@@ -140,7 +142,7 @@ export const Technologies = () => {
 
         {/* Categoría estática para aprendizaje */}
         <div className="tech-category learning-block">
-          <h3>En proceso de aprendizaje / profundización</h3>
+          <h3>{t.learningTitle || "En proceso de aprendizaje / profundización"}</h3>
           <div className="tech-tags-static">
             {learningTechs.map((tech, index) => (
               <div 

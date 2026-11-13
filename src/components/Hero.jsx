@@ -1,14 +1,14 @@
 import React from 'react';
-import { ArrowRight, Terminal } from 'lucide-react';
-const miFoto = "/assets/carlos-bianchi.jpg"; // Asegúrate de tener tu foto en esta ruta
+import { ArrowRight } from 'lucide-react';
+const miFoto = "/assets/carlos-bianchi.jpg";
 import './Hero.css';
 
-export const Hero = () => {
+export const Hero = ({ t = {} }) => {
   return (
     <section id="inicio" className="hero">
       <div className="hero-container">
         
-        {/* NUEVA SECCIÓN GRANDE Y CENTRADA ARRIBA */}
+        {/* SECCIÓN GRANDE Y CENTRADA ARRIBA */}
         <div className="hero-main-profile">
           <div className="hero-big-avatar-wrapper">
             <img 
@@ -19,30 +19,30 @@ export const Hero = () => {
           </div>
           <h1 className="hero-profile-name">Carlos Bianchi</h1>
           <p className="hero-profile-tagline">
-            Frontend Developer · En formación Full Stack
-            </p>
+            {t.tagline || "Frontend Developer · En formación Full Stack"}
+          </p>
         </div>
 
-        {/* CONTENIDO INFERIOR (Grid con título principal y ventana de código) */}
+        {/* CONTENIDO INFERIOR CENTRADO */}
         <div className="hero-grid-content">
           <div className="hero-content">
             <div className="badge-available">
               <span className="pulse-dot"></span>
-              <span>Abierto a nuevas oportunidades en desarrollo Frontend</span>
+              <span>{t.badge || "Abierto a nuevas oportunidades en desarrollo Frontend"}</span>
             </div>
 
-            <h2>Construyo experiencias web con código y creatividad.</h2>
+            <h2>{t.title || "Construyo experiencias web con código y creatividad."}</h2>
             <p>
-              Desarrollo aplicaciones web modernas y funcionales con React y JavaScript. Actualmente estoy ampliando mis conocimientos en Backend para crear soluciones completas, desde la interfaz hasta la lógica del servidor.
-              </p>
+              {t.description || "Desarrollo aplicaciones web modernas y funcionales con React y JavaScript. Actualmente estoy ampliando mis conocimientos en Backend para crear soluciones completas, desde la interfaz hasta la lógica del servidor."}
+            </p>
 
             <div className="hero-buttons">
               <a href="#proyectos" className="btn-primary">
-                <span>Explorar Proyectos</span>
+                <span>{t.explore || "Explorar Proyectos"}</span>
                 <ArrowRight size={18} />
               </a>
               <a href="#contacto" className="btn-secondary">
-                Contactarme
+                {t.contact || "Contactarme"}
               </a>
             </div>
 

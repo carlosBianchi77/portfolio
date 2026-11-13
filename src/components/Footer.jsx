@@ -1,7 +1,10 @@
 import React from 'react';
 import './Footer.css';
 
-export const Footer = () => {
+export const Footer = ({ t = {} }) => {
+  const currentYear = new Date().getFullYear();
+  const rightsText = t.rights || "Todos los derechos reservados.";
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -46,7 +49,7 @@ export const Footer = () => {
           </a>
         </div>
 
-        <p className="footer-copy">© {new Date().getFullYear()} Carlos Bianchi. Todos los derechos reservados.</p>
+        <p className="footer-copy">© {currentYear} Carlos Bianchi. {rightsText}</p>
       </div>
     </footer>
   );
