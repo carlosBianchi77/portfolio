@@ -16,7 +16,7 @@ export const About = () => {
               Actualmente curso una <strong>Diplomatura Web Full Stack en ICARO</strong>, donde continúo fortaleciendo mis conocimientos en desarrollo web. Me interesa comprender la lógica detrás de cada proyecto, resolver problemas y construir aplicaciones funcionales, organizadas y fáciles de utilizar.
               </p>
             <p>
-              Mi objetivo es conseguir mi primera oportunidad laboral como <strong>Frontend Developer Junior o Trainee</strong>, aportando compromiso, curiosidad técnica y muchas ganas de aprender y crecer profesionalmente.
+              Interesado en formar parte de equipos de desarrollo donde pueda aportar mis conocimientos en tecnologías <strong>Frontend</strong>, colaborar en proyectos reales y continuar fortaleciendo mis habilidades técnicas. Me caracterizo por la curiosidad, la iniciativa y el compromiso con el aprendizaje continuo.
               </p>
           </div>
 
